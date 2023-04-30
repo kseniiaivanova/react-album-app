@@ -9,6 +9,6 @@ export const Navbar = () => {
                 <li>
                     <Link to="/">Home</Link>
                 </li>
-                <li><Link to="/albums">Albums</Link></li>
+                <li><Link to="/albumlist">Albums</Link></li>
             </ul></nav ></>)
 }
