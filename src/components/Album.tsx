@@ -1,6 +1,3 @@
-import { myAlbum } from "./models/MyAlbum";
-
-
 export interface MyAlbumProps {
     id: string,
     name: string,
