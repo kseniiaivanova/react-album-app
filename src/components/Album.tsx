@@ -7,19 +7,26 @@ export interface MyAlbumProps {
     artist: string,
     year: number,
     label: string,
-    showFullInfo: boolean
+    showFullInfo?: boolean
 };
 
 
-export const Album = (props: MyAlbumProps) => {
-    if (props.showFullInfo === true) {
+export const Album = ({
+    id,
+    name,
+    artist,
+    year,
+    label,
+    showFullInfo = false }
+    : MyAlbumProps) => {
+    if (showFullInfo === false) {
         return (<>
             <div className="album">
-                <h3>{props.name}</h3>
-                <h4>{props.id}</h4>
-                <h4>{props.artist}</h4>
-                <h4>{props.year}</h4>
-                <h4>{props.label}</h4>
+
+                <h3>{name}</h3>
+                <h4>{artist}</h4>
+
+
             </div>
         </>)
 
@@ -27,8 +34,11 @@ export const Album = (props: MyAlbumProps) => {
     else {
         return (<>
             <div className="album">
-                <h3>{props.name}</h3>
-                <h4>{props.artist}</h4>
+                <h3>{name}</h3>
+                <h4>{id}</h4>
+                <h4>{artist}</h4>
+                <h4>{year}</h4>
+                <h4>{label}</h4>
 
             </div>
         </>)
