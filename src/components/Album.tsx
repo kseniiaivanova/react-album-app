@@ -1,9 +1,13 @@
+import "./Album.scss"
+
+
 export interface MyAlbumProps {
     id: string,
     name: string,
     artist: string,
     year: number,
     label: string,
+    image: string;
     showFullInfo?: boolean
 };
 
@@ -14,6 +18,7 @@ export const Album = ({
     artist,
     year,
     label,
+    image,
     showFullInfo = false }
     : MyAlbumProps) => {
     if (showFullInfo === false) {
@@ -31,11 +36,12 @@ export const Album = ({
     else {
         return (<>
             <div className="album">
-                <h3>{name}</h3>
-                <h4>{id}</h4>
-                <h4>{artist}</h4>
-                <h4>{year}</h4>
-                <h4>{label}</h4>
+                <img src={image} alt={name} />
+                <h3>Title: {name}</h3>
+                <h4>ID: {id}</h4>
+                <h4>Artist: {artist}</h4>
+                <h4>Year: {year}</h4>
+                <h4>Label: {label}</h4>
 
             </div>
         </>)

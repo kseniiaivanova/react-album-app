@@ -1,9 +1,7 @@
 import { allAlbums } from "../components/albums";
 import { useParams } from "react-router";
 import { Album } from "../components/Album";
-import { myAlbum } from "../components/models/MyAlbum";
 import { Navbar } from "../components/Navbar";
-
 
 
 export const AlbumView = () => {
@@ -17,6 +15,7 @@ export const AlbumView = () => {
         return (
             <>
                 <Navbar></Navbar>
+                <h1>Internet Music Database</h1>
                 <Album {...currentAlbum} showFullInfo={true}></Album>
             </>
         );
