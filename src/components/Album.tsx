@@ -16,7 +16,10 @@ export const Album = (props: MyAlbumProps) => {
         return (<>
             <div className="album">
                 <h3>{props.name}</h3>
+                <h4>{props.id}</h4>
                 <h4>{props.artist}</h4>
+                <h4>{props.year}</h4>
+                <h4>{props.label}</h4>
             </div>
         </>)
 
@@ -24,8 +27,9 @@ export const Album = (props: MyAlbumProps) => {
     else {
         return (<>
             <div className="album">
-                <h3>{ }</h3>
-                <h4>{ }</h4>
+                <h3>{props.name}</h3>
+                <h4>{props.artist}</h4>
+
             </div>
         </>)
     }

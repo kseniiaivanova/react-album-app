@@ -1,20 +1,21 @@
 
 
 import { Album } from "../components/Album";
-import { myAlbum } from "../components/models/MyAlbum";
-import { MyAlbumProps } from "../components/Album";
+import { albumLoader } from "../loaders/albumLoader";
+import { Link, useLoaderData } from "react-router-dom";
+import { Loader } from "../loaders/albumLoader";
 
-const myAlbums = [new myAlbum
-    ("123", "Ziggy Stardust", "David Bowie", 1972, "RCA"
-    ), new myAlbum("345", "Meat Is Murder", "The Smiths", 1985, "Rough Trade")
 
-];
 
 export const AlbumList = () => {
+
+    const { albums } = useLoaderData() as Loader;
+
+
     return (
-        <> {myAlbums.map((album) => (
+        <> {albums.map((album) => (
             <div key={album.id}>
-                <Album id={album.id} name={album.title} artist={album.artist} year={album.year} label={album.label} showFullInfo={false} ></Album>
+                <Album id={album.id} name={album.name} artist={album.artist} year={album.year} label={album.label} showFullInfo={false} ></Album>
 
             </div >))}
 
