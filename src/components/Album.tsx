@@ -23,26 +23,31 @@ export const Album = ({
     : MyAlbumProps) => {
     if (showFullInfo === false) {
         return (<>
-            <div className="album">
+            <div className="wrapper">
+                <div className="album">
 
-                <h3>{name}</h3>
-                <h4>{artist}</h4>
+                    <h3>{name}</h3>
+                    <h4>{artist}</h4>
 
 
+                </div>
             </div>
+
         </>)
 
     }
     else {
         return (<>
-            <div className="album">
-                <img src={image} alt={name} />
-                <h3>Title: {name}</h3>
-                <h4>ID: {id}</h4>
-                <h4>Artist: {artist}</h4>
-                <h4>Year: {year}</h4>
-                <h4>Label: {label}</h4>
+            <div className="wrapper">
+                <div className="album">
+                    <img src={image} alt={name} />
+                    <h3>Title: {name}</h3>
+                    <h4>Artist: {artist}</h4>
+                    <p>ID: {id}</p>
+                    <p>Year: {year}</p>
+                    <p>Label: {label}</p>
 
+                </div>
             </div>
         </>)
     }
