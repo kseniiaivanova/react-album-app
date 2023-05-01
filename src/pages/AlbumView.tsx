@@ -10,7 +10,7 @@ export const AlbumView = () => {
     const currentAlbum = allAlbums.find((album) => album.id === params.id);
 
     if (currentAlbum === undefined) {
-        return <h2>Choose an album!</h2>;
+        return <h1>Choose an album!</h1>;
     } else {
         return (
             <>
