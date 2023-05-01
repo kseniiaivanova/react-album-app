@@ -12,6 +12,7 @@ export const AlbumList = () => {
     return (
         <> <Navbar></Navbar>
             <h1>Internet Music Database</h1>
+
             {allAlbums.map((album, index) => (
                 <Link key={index} to={album.id}>
                     <Album {...album} ></Album>

@@ -1,13 +1,29 @@
+@import "./style/variables";
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
 .navLinks {
 
     list-style: none;
-    background-color: bisque;
+
     color: aquamarine;
-}
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
 
-.navLinks a {
+    a {
 
-    text-decoration: none;
-    padding: 5px;
-    background-color: aqua;
+        text-decoration: none;
+        padding: 5px;
+        background-color: aqua;
+        color: $primary-color;
+
+        &:hover {
+            background-color: rgb(26, 107, 107);
+        }
+    }
 }
