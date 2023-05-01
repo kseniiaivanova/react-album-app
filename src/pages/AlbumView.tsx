@@ -1,4 +1,4 @@
-import { allAlbums } from "../components/albums";
+import { allAlbums } from "../mockdata/albums";
 import { useParams } from "react-router";
 import { Album } from "../components/Album";
 import { Navbar } from "../components/Navbar";

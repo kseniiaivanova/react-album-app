@@ -1,4 +1,4 @@
-import { allAlbums } from "../components/albums";
+import { allAlbums } from "../mockdata/albums";
 import { Album } from "../components/Album";
 import { Link } from "react-router-dom";
 import { Navbar } from "../components/Navbar";
