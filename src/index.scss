@@ -19,8 +19,14 @@ body {
 h1 {
   background-color: aqua;
   display: inline-block;
+  padding: 5px;
+  margin-left: 40px;
+
 }
 
 .intro {
   color: aqua;
+  display: flex;
+  justify-content: center;
+  font-size: large;
 }
